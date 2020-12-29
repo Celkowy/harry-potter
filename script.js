@@ -4,7 +4,7 @@ const wrapper = document.querySelector('.wrapper')
 loadCharacters()
 
 async function loadCharacters() {
-  const res = await fetch('http://hp-api.herokuapp.com/api/characters')
+  const res = await fetch('https://hp-api.herokuapp.com/api/characters')
   const data = await res.json()
 
   for (let index = 0; index < Object.keys(data).length; index++) {
