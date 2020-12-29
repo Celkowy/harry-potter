@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  height: 75px;
+  line-height: 75px;
+  color: white;
+  font-size: 28px;
+}
+
+img {
+  height: 100px;
+  margin-right: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-character {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 25px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: filter 0.3s;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 15px;
+  transition: opacity 0.3s;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.name,
+.ancestry,
+.date-of-birth,
+.eye-colour,
+.hair-colour,
+.patronus,
+.wand,
+.wood,
+.core,
+.length {
+  font-weight: bold;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px;
+}
+
+.additional-info {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 200%;
+  left: 50%;
+  transition: top 0.5s;
+}
+
+.single-character:hover .additional-info {
+  top: 50%;
+}
+
+.single-character:hover .flex {
+  opacity: 0;
+}
+
+@media (max-width: 480px) {
+  .single-character {
+    height: 175px;
+  }
+
+  img {
+    margin-right: 0px;
+  }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .flex {
+    margin: 5px;
+  }
+
+  .left {
+    width: 100%;
+    justify-content: start;
+    margin-left: 15px;
+  }
+
+  .right {
+    display: none;
+  }
+}
