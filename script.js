@@ -7,7 +7,6 @@ async function loadCharacters() {
   const res = await fetch('http://hp-api.herokuapp.com/api/characters')
   const data = await res.json()
 
-  console.log(data)
   for (let index = 0; index < Object.keys(data).length; index++) {
     createCharacter(data)
   }
@@ -27,7 +26,6 @@ function createCharacter(data) {
     <img src="${data[i].image}" alt="">
   </div>
   
-
   <div class="additional-info">
     <div class="left">
       <div class="ancestry">ancestry: ${data[i].ancestry}</div>
@@ -46,7 +44,6 @@ function createCharacter(data) {
       </div>
     </div>
   </div>
-
   `
   wrapper.appendChild(a)
   i++
