@@ -16,11 +16,18 @@ nav {
   line-height: 75px;
   color: white;
   font-size: 28px;
+  border-radius: 0 0 10px 10px;
+}
+
+nav h1 {
+  font-size: 32px;
 }
 
 img {
+  border-radius: 10px;
   height: 100px;
-  margin-right: 40px;
+  margin-right: 10px;
+  transition: opacity 0.5s;
 }
 
 .wrapper {
@@ -54,17 +61,37 @@ img {
   font-size: 32px;
 }
 
-.name,
+.additional-info {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 200%;
+  left: 50%;
+  transition: top 0.5s;
+  cursor: default;
+}
+
+.single-character:hover .additional-info {
+  top: 50%;
+}
+
+.single-character:hover .flex {
+  opacity: 0;
+}
+
 .ancestry,
 .date-of-birth,
-.eye-colour,
-.hair-colour,
 .patronus,
-.wand,
 .wood,
 .core,
 .length {
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  border-left: 1px solid black;
+  padding-left: 5px;
 }
 
 .left,
@@ -75,23 +102,16 @@ img {
   margin: 25px;
 }
 
-.additional-info {
-  display: flex;
-  width: 100%;
-  justify-content: left;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 200%;
-  left: 50%;
-  transition: top 0.5s;
+.left p,
+.right p {
+  font-size: 16px;
+  margin-right: 5px;
+  font-weight: bold;
 }
 
-.single-character:hover .additional-info {
-  top: 50%;
-}
-
-.single-character:hover .flex {
-  opacity: 0;
+.wand h2,
+.hover-name h2 {
+  font-size: 18px;
 }
 
 @media (max-width: 480px) {
@@ -125,5 +145,9 @@ img {
 
   .right {
     display: none;
+  }
+
+  .single-character:hover img {
+    opacity: 0.3;
   }
 }

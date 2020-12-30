@@ -28,19 +28,20 @@ function createCharacter(data) {
   
   <div class="additional-info">
     <div class="left">
-      <div class="ancestry">ancestry: ${data[i].ancestry}</div>
-      <div class="date-of-birth">date of birth: ${data[i].dateOfBirth}</div>
-      <div class="eye-colour">eye colour: ${data[i].eyeColour}</div>
-      <div class="hair-colour">hair colour: ${data[i].hairColour}</div>
-      <div class="patronus">patronus: ${data[i].patronus}</div>
+      <div class="hover-name">
+        <h2>${data[i].name}</h2>
+        <div class="ancestry"><p>ancestry: </p>${data[i].ancestry}</div>
+        <div class="date-of-birth"><p>date of birth: </p>${data[i].dateOfBirth}</div>
+        <div class="patronus"><p>patronus: </p>${data[i].patronus}</div>
+      </div>
     </div>
 
     <div class="right">
       <div class="wand">
-        wand:
-        <div class="wood">wood: ${data[i].wand.wood}</div>
-        <div class="core">core: ${data[i].wand.core}</div>
-        <div class="length">length: ${data[i].wand.length}</div>
+        <h2>wand:</h2>
+        <div class="wood"><p>wood: </p>${data[i].wand.wood}</div>
+        <div class="core"><p>core: </p>${data[i].wand.core}</div>
+        <div class="length"><p>length: </p>${data[i].wand.length}</div>
       </div>
     </div>
   </div>
