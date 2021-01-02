@@ -47,9 +47,13 @@ nav h1 {
 }
 
 .cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 5px;
   top: 50%;
+  height: 16px;
   transform: translateY(-50%);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
