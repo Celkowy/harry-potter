@@ -17,8 +17,10 @@ search.addEventListener('input', e => {
 })
 
 cross.addEventListener('click', () => {
-  search.value = ''
-  displayCharacters(characters)
+  if (search.value != '') {
+    search.value = ''
+    displayCharacters(characters)
+  }
 })
 
 async function loadCharacters() {

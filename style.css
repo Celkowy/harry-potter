@@ -52,8 +52,16 @@ nav h1 {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
+.fa-times {
+  transition: transform 0.2s;
+}
+
+.fa-times:active {
+  transform: scale(0.8);
+}
 img {
   border-radius: 10px;
   height: 100px;
