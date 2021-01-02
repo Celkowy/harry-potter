@@ -27,14 +27,14 @@ function displayCharacters(characters) {
   const htmlString = characters
     .map(character => {
       return `
-      <div class="single-character">
+    <div class="single-character">
       <div class="flex">
         <div class="name">${character.name}</div>
         <div class="house">house: ${character.house}</div>
       </div>
     
       <div class="photo">
-        <img src="${character.image}" alt="" />
+        <img src="${character.image}" alt="${character.name}" />
       </div>
     
       <div class="additional-info">

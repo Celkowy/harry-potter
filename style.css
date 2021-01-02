@@ -10,13 +10,11 @@ body {
 }
 
 nav {
-  width: 100%;
   text-align: center;
   background-color: black;
   height: 75px;
   line-height: 75px;
   color: white;
-  font-size: 28px;
   border-radius: 0 0 10px 10px;
   margin-bottom: 25px;
 }
@@ -85,7 +83,6 @@ img {
 .additional-info {
   display: flex;
   width: 100%;
-  justify-content: left;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 200%;
