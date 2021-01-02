@@ -1,6 +1,7 @@
 const h1 = document.querySelector('h1')
 const charactersWrap = document.querySelector('.characters-wrap')
 const search = document.getElementById('search')
+const cross = document.querySelector('.cross')
 let characters = []
 
 search.addEventListener('input', e => {
@@ -13,6 +14,11 @@ search.addEventListener('input', e => {
     )
   })
   displayCharacters(filteredCharacters)
+})
+
+cross.addEventListener('click', () => {
+  search.value = ''
+  displayCharacters(characters)
 })
 
 async function loadCharacters() {
