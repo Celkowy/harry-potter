@@ -42,7 +42,7 @@ function displayCharacters(characters) {
       </div>
     
       <div class="photo">
-        <img src="${character.image}" alt="${character.name}" />
+        <img src="${character.image || `./img/hp${Math.floor(Math.random() * 8 + 1)}.jpg`}" alt="${character.name}" />
       </div>
     
       <div class="additional-info">
