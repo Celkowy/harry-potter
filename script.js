@@ -24,7 +24,7 @@ cross.addEventListener('click', () => {
 })
 
 async function loadCharacters() {
-  const res = await fetch('https://hp-api.herokuapp.com/api/characters')
+  const res = await fetch('https://hp-api.onrender.com/api/characters')
   characters = await res.json()
   displayCharacters(characters)
 }
